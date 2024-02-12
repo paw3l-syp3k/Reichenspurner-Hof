@@ -319,7 +319,7 @@ body {
 .wrapper-6 {
   width: 70%;
   max-width: 2000px;
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 .wrapper-6 .wrapper-6-title {
   font-size: var(--step-4);
@@ -328,12 +328,13 @@ body {
 }
 .wrapper-6 .wrapper-6-container {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 6rem;
   display: grid;
+  row-gap: 4rem;
   grid-template-columns: 1fr 1fr;
 }
 .wrapper-6 .wrapper-6-container .wrapper-6-container-img {
-  height: 20rem;
+  height: 25rem;
   background-image: url(../assets/images/wrapper-6-img.png);
   background-position: center;
   background-size: cover;
@@ -367,4 +368,52 @@ body {
 .wrapper-6 .wrapper-6-container .wrapper-6-container-content .wrapper-6-container-content-btn span {
   font-size: var(--step-3);
   margin-left: 0.5rem;
+}
+.wrapper-6 .wrapper-6-container .left {
+  margin-left: unset;
+  margin-right: auto;
+}
+
+.wrapper-7 {
+  width: 100%;
+  max-width: 2000px;
+  padding: 4rem 15%;
+  background-color: rgb(64, 64, 64);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.wrapper-7 .wrapper-7-img {
+  width: 15rem;
+}
+.wrapper-7 .wrapper-7-list {
+  list-style: none;
+  margin: auto;
+}
+.wrapper-7 .wrapper-7-list-item {
+  color: #ffffff;
+  font-size: var(--step-0);
+  font-weight: 300;
+  padding: 0.15rem 0;
+}
+.wrapper-7 .wrapper-7-socials {
+  display: flex;
+  height: 3rem;
+  margin-top: 1rem;
+}
+.wrapper-7 .wrapper-7-socials .wrapper-7-social-item {
+  width: 2rem;
+  height: 2rem;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper-7 .wrapper-7-socials .fb {
+  background-image: url(../assets/icons/facebook.png);
+}
+.wrapper-7 .wrapper-7-socials .ig {
+  background-image: url(../assets/icons/instagram.png);
+  margin: 0 1rem;
+}
+.wrapper-7 .wrapper-7-socials .li {
+  background-image: url(../assets/icons/linkedin.png);
 }/*# sourceMappingURL=main.css.map */
