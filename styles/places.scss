@@ -1,0 +1,209 @@
+$main-color: #44cc2f;
+$white: #ffffff;
+$gray: rgb(232, 232, 232);
+$lightgray: rgb(244, 244, 244);
+$darkgray: rgb(64, 64, 64);
+$black: rgb(17, 17, 17);
+
+:root {
+  /* Step -2: 11.1111px → 8.96px */
+  --step--2: clamp(0.56rem, 0.7213rem + -0.1344vi, 0.6944rem);
+  /* Step -1: 13.3333px → 11.2px */
+  --step--1: clamp(0.7rem, 0.86rem + -0.1333vi, 0.8333rem);
+  /* Step 0: 16px → 14px */
+  --step-0: clamp(0.875rem, 1.025rem + -0.125vi, 1rem);
+  /* Step 1: 19.2px → 17.5px */
+  --step-1: clamp(1.0938rem, 1.2213rem + -0.1062vi, 1.2rem);
+  /* Step 2: 23.04px → 21.875px */
+  --step-2: clamp(1.3672rem, 1.4546rem + -0.0728vi, 1.44rem);
+  /* Step 3: 27.648px → 27.3438px */
+  --step-3: clamp(1.709rem, 1.7318rem + -0.019vi, 1.728rem);
+  /* Step 4: 33.1776px → 34.1797px */
+  --step-4: clamp(2.0736rem, 2.0611rem + 0.0626vi, 2.1362rem);
+  /* Step 5: 39.8131px → 42.7246px */
+  --step-5: clamp(2.7994rem, 2.1767rem + 3.1134vi, 5.9128rem);
+  --step-6: clamp(1.728rem, 1.4388rem + 1.4458vi, 3.1738rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: unset;
+}
+
+body {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.wrapper-1 {
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  .wrapper-1-content {
+    background-color: $white;
+    width: 30rem;
+    margin-left: 10rem;
+    margin-top: 15rem;
+    padding: 2rem;
+    .wrapper-1-content-title {
+      font-size: var(--step-4);
+      color: $main-color;
+      font-weight: 500;
+    }
+    .wrapper-1-content-description {
+      font-size: var(--step-1);
+      font-weight: 400;
+      color: $black;
+      margin: 1rem 0 2rem 0;
+    }
+    .wrapper-1-content-btn {
+      font-size: var(--step-1);
+      color: $main-color;
+      line-height: 2rem;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid $main-color;
+      span {
+        font-size: var(--step-4);
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+.tussling {
+  background-image: url(../assets/images/wrapper-1-bg-2.png);
+}
+.wrapper-2 {
+  width: 70%;
+  max-width: 2000px;
+  padding: 3rem 0;
+  margin: auto;
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  grid-template-columns: 1fr 3px 1fr 3px 1fr;
+  .wrapper-2-item {
+    text-align: center;
+    .wrapper-2-item-title {
+      font-size: var(--step-4);
+      color: $main-color;
+      font-weight: 500;
+    }
+    .wrapper-2-description {
+      font-size: var(--step-1);
+      font-weight: 400;
+      color: $black;
+      margin: 1rem 0 0 0;
+    }
+  }
+  .wrapper-2-spacer {
+    width: 3px;
+    height: 60%;
+    background-color: $gray;
+  }
+}
+
+.wrapper-3 {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0;
+  .wrapper-3-img {
+    background-image: url(../assets/images/tussling-wrapper-3-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 30rem;
+    width: 45rem;
+  }
+  .wrapper-3-content {
+    padding: 3.5rem;
+    width: 45rem;
+    margin-left: -3rem;
+    background-color: $main-color;
+    .wrapper-3-content-title {
+      font-size: var(--step-4);
+      color: $white;
+      font-weight: 500;
+    }
+    .wrapper-3-content-description {
+      font-size: var(--step-1);
+      font-weight: 400;
+      color: $white;
+      margin: 1rem 0 0 0;
+    }
+  }
+}
+.wrapper-4 {
+  width: 70%;
+  padding: 8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .wrapper-4-content {
+    width: 30rem;
+    .wrapper-4-content-title {
+      font-size: var(--step-4);
+      color: $main-color;
+      font-weight: 500;
+    }
+    .wrapper-4-content-description {
+      font-size: var(--step-1);
+      font-weight: 400;
+      color: $black;
+      margin: 1rem 0 0 0;
+    }
+  }
+  .wrapper-4-container {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .wrapper-4-container-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      background-color: $lightgray;
+      .wrapper-4-container-item-img {
+        width: 2rem;
+        min-width: 2rem;
+        height: 2rem;
+        background-image: url(../assets/icons/places-wrapper-4-icon.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .wrapper-4-container-item-description {
+        font-size: var(--step-1);
+        font-weight: 400;
+        margin-left: 1rem;
+        color: $black;
+      }
+      &:nth-child(2) {
+        margin: 2rem 0;
+      }
+    }
+  }
+}

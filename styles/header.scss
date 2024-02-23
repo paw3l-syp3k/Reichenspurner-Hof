@@ -1,0 +1,115 @@
+$main-color: #44cc2f;
+$white: #ffffff;
+$gray: rgb(232, 232, 232);
+$darkgray: rgb(64, 64, 64);
+$black: rgb(17, 17, 17);
+
+:root {
+  /* Step -2: 11.1111px → 8.96px */
+  --step--2: clamp(0.56rem, 0.7213rem + -0.1344vi, 0.6944rem);
+  /* Step -1: 13.3333px → 11.2px */
+  --step--1: clamp(0.7rem, 0.86rem + -0.1333vi, 0.8333rem);
+  /* Step 0: 16px → 14px */
+  --step-0: clamp(0.875rem, 1.025rem + -0.125vi, 1rem);
+  /* Step 1: 19.2px → 17.5px */
+  --step-1: clamp(1.0938rem, 1.2213rem + -0.1062vi, 1.2rem);
+  /* Step 2: 23.04px → 21.875px */
+  --step-2: clamp(1.3672rem, 1.4546rem + -0.0728vi, 1.44rem);
+  /* Step 3: 27.648px → 27.3438px */
+  --step-3: clamp(1.709rem, 1.7318rem + -0.019vi, 1.728rem);
+  /* Step 4: 33.1776px → 34.1797px */
+  --step-4: clamp(2.0736rem, 2.0611rem + 0.0626vi, 2.1362rem);
+  /* Step 5: 39.8131px → 42.7246px */
+  --step-5: clamp(2.7994rem, 2.1767rem + 3.1134vi, 5.9128rem);
+  --step-6: clamp(1.728rem, 1.4388rem + 1.4458vi, 3.1738rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: unset;
+}
+
+.wrapper-1-header {
+  width: 90%;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .wrapper-1-header-logo {
+    width: 12rem;
+    height: 6rem;
+    background-image: url(../assets/images/reichenspurner-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .wrapper-1-header-menu {
+    display: flex;
+    list-style: none;
+    .wrapper-1-header-menu-item {
+      color: $white;
+      margin: 0 1.5rem;
+      font-size: var(--step-1);
+      font-weight: 400;
+      cursor: pointer;
+    }
+    span {
+      color: $main-color;
+    }
+    .places-container {
+      position: relative;
+      .places-menu-btn {
+        display: flex;
+        align-items: center;
+        .places-menu-btn-arrow {
+          width: 1rem;
+          height: 1rem;
+          margin-left: 0.75rem;
+          background-image: url(../assets/icons/menu-list-icon.png);
+          background-position: center;
+          background-size: cover;
+          transition: 250ms ease-in-out;
+        }
+        .arrow-active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .places-list {
+      list-style: none;
+      background-color: $main-color;
+      position: absolute;
+      left: 0;
+      top: 3rem;
+      width: 14rem;
+      padding: 1rem;
+      display: none;
+      transition: 250ms ease-in-out;
+      cursor: default;
+      .places-list-item {
+        margin: 0.75rem 0;
+        cursor: pointer;
+      }
+    }
+    .places-list-active {
+      display: block;
+    }
+  }
+}
