@@ -94,6 +94,12 @@ body {
 .tussling {
   background-image: url(../assets/images/wrapper-1-bg-2.png);
 }
+.weiding {
+  background-image: url(../assets/images/wrapper-1-bg-3.png);
+}
+.garching {
+  background-image: url(../assets/images/wrapper-1-bg-4.png);
+}
 .wrapper-2 {
   width: 70%;
   max-width: 2000px;
@@ -135,7 +141,7 @@ body {
     background-image: url(../assets/images/tussling-wrapper-3-bg.jpeg);
     background-position: center;
     background-size: cover;
-    height: 30rem;
+    height: 35rem;
     width: 45rem;
   }
   .wrapper-3-content {
@@ -204,6 +210,60 @@ body {
       &:nth-child(2) {
         margin: 2rem 0;
       }
+    }
+  }
+}
+
+.wrapper-5 {
+  width: 70%;
+  display: grid;
+  grid-gap: 1rem;
+  padding: 8rem 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'img1 img2 content content'
+    'img3 img4 content content'
+    'img5 img5 img5 img6';
+  .wrapper-5-img {
+    background-position: center;
+    height: 15rem;
+    background-size: cover;
+    background-color: aquamarine;
+  }
+  .img1 {
+    grid-area: img1;
+  }
+  .img2 {
+    grid-area: img2;
+  }
+  .img3 {
+    grid-area: img3;
+  }
+  .img4 {
+    grid-area: img4;
+  }
+  .img5 {
+    grid-area: img5;
+  }
+  .img6 {
+    grid-area: img6;
+  }
+  .wrapper-5-content {
+    grid-area: content;
+    display: flex;
+    padding: 0 6rem;
+    justify-content: center;
+    flex-direction: column;
+    .wrapper-5-content-title {
+      font-size: var(--step-4);
+      color: $main-color;
+      font-weight: 500;
+    }
+    .wrapper-5-content-description {
+      font-size: var(--step-1);
+      font-weight: 400;
+      color: $black;
+      margin: 1rem 0 0 0;
     }
   }
 }

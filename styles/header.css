@@ -67,9 +67,6 @@ button {
   font-weight: 400;
   cursor: pointer;
 }
-.wrapper-1-header .wrapper-1-header-menu span {
-  color: #44cc2f;
-}
 .wrapper-1-header .wrapper-1-header-menu .places-container {
   position: relative;
 }
