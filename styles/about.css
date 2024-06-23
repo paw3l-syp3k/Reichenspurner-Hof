@@ -1,0 +1,177 @@
+@charset "UTF-8";
+:root {
+  /* Step -2: 11.1111px → 8.96px */
+  --step--2: clamp(0.56rem, 0.7213rem + -0.1344vi, 0.6944rem);
+  /* Step -1: 13.3333px → 11.2px */
+  --step--1: clamp(0.7rem, 0.86rem + -0.1333vi, 0.8333rem);
+  /* Step 0: 16px → 14px */
+  --step-0: clamp(0.875rem, 1.025rem + -0.125vi, 1rem);
+  /* Step 1: 19.2px → 17.5px */
+  --step-1: clamp(1.0938rem, 1.2213rem + -0.1062vi, 1.2rem);
+  /* Step 2: 23.04px → 21.875px */
+  --step-2: clamp(1.3672rem, 1.4546rem + -0.0728vi, 1.44rem);
+  /* Step 3: 27.648px → 27.3438px */
+  --step-3: clamp(1.709rem, 1.7318rem + -0.019vi, 1.728rem);
+  /* Step 4: 33.1776px → 34.1797px */
+  --step-4: clamp(2.0736rem, 2.0611rem + 0.0626vi, 2.1362rem);
+  /* Step 5: 39.8131px → 42.7246px */
+  --step-5: clamp(2.7994rem, 2.1767rem + 3.1134vi, 5.9128rem);
+  --step-6: clamp(1.728rem, 1.4388rem + 1.4458vi, 3.1738rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: unset;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.wrapper-1 {
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-image: url(../assets/images/backgrounds/bg-ex-3.png);
+}
+.wrapper-1 .wrapper-1-content {
+  background-color: #ffffff;
+  width: 30rem;
+  margin-left: 15%;
+  margin-top: 15rem;
+  padding: 2rem;
+}
+.wrapper-1 .wrapper-1-content .wrapper-1-content-title {
+  font-size: var(--step-4);
+  color: #44cc2f;
+  font-weight: 500;
+}
+.wrapper-1 .wrapper-1-content .wrapper-1-content-description {
+  font-size: var(--step-1);
+  font-weight: 400;
+  color: rgb(17, 17, 17);
+  margin: 1rem 0 2rem 0;
+}
+.wrapper-1 .wrapper-1-content .wrapper-1-content-btn {
+  font-size: var(--step-1);
+  color: #44cc2f;
+  line-height: 2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #44cc2f;
+}
+.wrapper-1 .wrapper-1-content .wrapper-1-content-btn span {
+  font-size: var(--step-4);
+  margin-left: 1rem;
+}
+
+.wrapper-2 {
+  width: 70%;
+  padding: 8rem 0;
+  display: flex;
+  justify-content: center;
+}
+.wrapper-2 .wrapper-2-title {
+  font-size: var(--step-4);
+  color: #44cc2f;
+  font-weight: 500;
+}
+.wrapper-2 .wrapper-2-description {
+  font-size: var(--step-2);
+  color: rgb(17, 17, 17);
+  margin-left: 4rem;
+}
+
+.wrapper-3 {
+  width: 70%;
+  height: 20rem;
+  background-color: #44cc2f;
+}
+
+.wrapper-4 {
+  width: 70%;
+  padding: 6rem 0;
+}
+.wrapper-4 .wrapper-4-title {
+  font-size: var(--step-4);
+  color: #44cc2f;
+  font-weight: 500;
+  margin-bottom: 6rem;
+}
+.wrapper-4 .wrapper-4-item {
+  width: 86%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 6px solid #44cc2f;
+  padding: 0 0 8rem 0;
+}
+.wrapper-4 .wrapper-4-item .wrapper-4-item-photo {
+  width: 45%;
+  height: 20rem;
+  background-position: center;
+  background-size: cover;
+}
+.wrapper-4 .wrapper-4-item .photo1960 {
+  background-image: url(../assets/images/Slider_Hof-2021.jpg);
+}
+.wrapper-4 .wrapper-4-item .photo2000 {
+  background-image: url(../assets/images/wrapper-1-bg-4.png);
+}
+.wrapper-4 .wrapper-4-item .photo2018 {
+  background-image: url(../assets/images/wrapper-1-bg-2.png);
+}
+.wrapper-4 .wrapper-4-item .photo2022 {
+  background-image: url(../assets/images/tussling-wrapper-3-bg.jpeg);
+}
+.wrapper-4 .wrapper-4-item .wrapper-4-item-content {
+  width: 40%;
+}
+.wrapper-4 .wrapper-4-item .wrapper-4-item-content .wrapper-4-item-content-title {
+  font-size: var(--step-3);
+  font-weight: 500;
+  color: #44cc2f;
+}
+.wrapper-4 .wrapper-4-item .wrapper-4-item-content .wrapper-4-item-content-name {
+  font-size: var(--step-2);
+  font-weight: 400;
+  color: rgb(64, 64, 64);
+}
+.wrapper-4 .wrapper-4-item .wrapper-4-item-content .wrapper-4-item-content-description {
+  font-size: var(--step-1);
+  font-weight: 400;
+  color: rgb(17, 17, 17);
+  margin-top: 1rem;
+}
+.wrapper-4 .wrapper-4-item .wrapper-4-item-circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffffff;
+  border-radius: 2rem;
+  border: 4px solid #44cc2f;
+  margin-right: -1.2rem;
+}/*# sourceMappingURL=about.css.map */
